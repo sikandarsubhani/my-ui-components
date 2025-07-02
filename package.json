@@ -1,27 +1,49 @@
 {
-  "name": "my_own_package",
+  "name": "@sikanadar/my-ui-components",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "A modern React component library built with Next.js, TypeScript, and Tailwind CSS",
+  "keywords": ["react", "nextjs", "typescript", "tailwindcss", "components", "ui"],
+  "author": "sikanadar",
+  "license": "MIT",
+  "main": "./dist/exports.js",
+  "module": "./dist/exports.mjs",
+  "types": "./dist/exports.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/exports.d.ts",
+      "import": "./dist/exports.mjs",
+      "require": "./dist/exports.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "build:package": "tsup",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build:package",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "next": "15.3.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.4"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
-    "@eslint/eslintrc": "^3"
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^4",
+    "tsup": "^8.5.0",
+    "typescript": "^5"
   }
 }

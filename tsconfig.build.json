@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": false,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
+    "incremental": false,
+    "tsBuildInfoFile": null
+  },
+  "include": [
+    "src/library/**/*",
+    "src/exports.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/app/**/*",
+    "**/*.test.*",
+    "**/*.spec.*"
+  ]
+}
