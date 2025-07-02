@@ -1,5 +1,5 @@
 {
-  "name": "@sikanadar/my-ui-components",
+  "name": "@7sikandar/my-ui-components",
   "version": "0.1.0",
   "private": false,
   "description": "A modern React component library built with Next.js, TypeScript, and Tailwind CSS",
@@ -45,5 +45,8 @@
     "tailwindcss": "^4",
     "tsup": "^8.5.0",
     "typescript": "^5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
